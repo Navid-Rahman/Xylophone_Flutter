@@ -15,69 +15,35 @@ class XylophoneApp extends StatelessWidget {
     player.play(AssetSource('note$tuneNumber.wav'));
   }
 
+  Expanded drawBoard(colorName, tuneNumber) {
+    return Expanded(
+      child: TextButton(
+        style:
+            ButtonStyle(backgroundColor: MaterialStateProperty.all(colorName)),
+        onPressed: () {
+          playSound(tuneNumber);
+        },
+        child: const Text(''),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.black,
         body: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              TextButton(
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.red)),
-                onPressed: () {
-                  playSound(1);
-                },
-                child: const Text(''),
-              ),
-              TextButton(
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.orange)),
-                onPressed: () {
-                  playSound(2);
-                },
-                child: const Text(''),
-              ),
-              TextButton(
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.yellow)),
-                onPressed: () {
-                  playSound(3);
-                },
-                child: const Text(''),
-              ),
-              TextButton(
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.green)),
-                onPressed: () {
-                  playSound(4);
-                },
-                child: const Text(''),
-              ),
-              TextButton(
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.teal)),
-                onPressed: () {
-                  playSound(5);
-                },
-                child: const Text(''),
-              ),
-              TextButton(
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.blue)),
-                onPressed: () {
-                  playSound(6);
-                },
-                child: const Text(''),
-              ),
-              TextButton(
-                style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.purple)),
-                onPressed: () {
-                  playSound(7);
-                },
-                child: const Text(''),
-              ),
+              drawBoard(Colors.red, 1),
+              drawBoard(Colors.orange, 2),
+              drawBoard(Colors.yellow, 3),
+              drawBoard(Colors.green, 4),
+              drawBoard(Colors.teal, 5),
+              drawBoard(Colors.blue, 6),
+              drawBoard(Colors.purple, 7),
             ],
           ),
         ),
