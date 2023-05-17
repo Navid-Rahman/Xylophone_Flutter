@@ -2,12 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 void main() {
-  runApp(XylophoneApp());
+  runApp(
+    const XylophoneApp(),
+  );
 }
 
-class XylophoneApp extends StatelessWidget {
-  XylophoneApp({Key? key}) : super(key: key);
+class XylophoneApp extends StatefulWidget {
+  const XylophoneApp({Key? key}) : super(key: key);
 
+  @override
+  State<XylophoneApp> createState() => _XylophoneAppState();
+}
+
+class _XylophoneAppState extends State<XylophoneApp> {
   AudioPlayer player = AudioPlayer();
 
   void playSound(int tuneNumber) {
