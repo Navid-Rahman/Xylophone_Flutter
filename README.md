@@ -9,7 +9,10 @@ The Xylophone App is a simple Flutter application that allows users to play diff
 - The app's user interface features a black background with a column of color-coded buttons representing the notes of a xylophone.
 
 # Screenshots
-![Screenshot_20230517_223834 (1)](https://github.com/Navid-Rahman/Xylophone_Flutter/assets/77515075/94637eaa-b83e-454a-8e08-1d3d1188e920)
+![Screenshot_20230517_223834 (1)](https://github.com/Navid-Rahman/Xylophone_Flutter/assets/77515075/2eb8185b-bd0c-42e2-a8ab-5af56b1395e2)
+
+[device-2023-05-17-224554.webm](https://github.com/Navid-Rahman/Xylophone_Flutter/assets/77515075/aa3ae3c7-08fe-4fee-abe3-d1b15ced356e)
+
 
 # Contact
 For any inquiries or feedback, please contact the project creator at navidrahman92@gmail.com.
