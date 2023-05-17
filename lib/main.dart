@@ -39,6 +39,10 @@ class _XylophoneAppState extends State<XylophoneApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Xylophone"),
+          centerTitle: true,
+        ),
         backgroundColor: Colors.black,
         body: SafeArea(
           child: Column(
